@@ -22,7 +22,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "lib/firebase.js",
+    "components/ImageUploader.jsx"
   ],
   "exclude": [
     "node_modules"
