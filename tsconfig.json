@@ -23,6 +23,13 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "pages/index.jsx",
+    "pages/enter.jsx",
+    "pages/admin/index.jsx",
+    "pages/admin/[slug].jsx",
+    "pages/[username]/index.jsx",
+    "pages/[username]/[slug].jsx",
+    "lib/hooks.js",
     "lib/firebase.js",
     "components/ImageUploader.jsx"
   ],
