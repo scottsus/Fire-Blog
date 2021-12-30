@@ -5,7 +5,7 @@ import PostFeed from '../../components/PostFeed';
 
 export async function getServerSideProps({ query }) {
     const { username } = query;
-
+    console.log(username);
     const userDoc = await getUserWithUsername(username);
 
     if (!userDoc) {

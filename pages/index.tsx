@@ -2,6 +2,7 @@ import PostFeed from '../components/PostFeed';
 import Loader from '../components/Loader';
 import { firestore, fromMillis, postToJSON } from '../lib/firebase';
 import { useState } from 'react';
+import EnterPage from './enter';
 
 const LIMIT = 1;
 
@@ -19,7 +20,7 @@ export async function getServerSideProps(context) {
     };
 }
 
-export default function Home() {
+export default function Home(props) {
     const [posts, setPosts] = useState(props.posts);
     const [loading, setLoading] = useState(false);
     const [postsEnd, setPostsEnd] = useState(false);
@@ -49,7 +50,8 @@ export default function Home() {
             <PostFeed posts={posts} />
             {!loading && !postsEnd && <button onClick={getMorePosts}>Load more</button>}
             <Loader show={loading} />
-            {postsEnd && 'You have reached the end!'};
+            {postsEnd && 'You have reached the end!'}
         </main>
     )
 }
+

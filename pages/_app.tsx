@@ -8,9 +8,7 @@ function MyApp({ Component, pageProps }) {
     const userData = useUserData();
 
     return (
-        <UserContext.Provider value={{
-            user: null, username: null
-        }}>
+        <UserContext.Provider value={userData}>
             <Navbar />
             <Component {...pageProps} />
             <Toaster />
